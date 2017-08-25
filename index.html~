@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>MGS Photosphere Viewer :: Homepage</title>
+		<!-- JS for bootstrap -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/popper.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<!-- JS for PhotoSphere -->
+		<script type="text/javascript" src="js/three.min.js"></script>
+		<script type="text/javascript"	src="js/photo-sphere-viewer.min.js"></script>
+		<script type="text/javascript" src="js/mgs.js"></script>
+		</script>
+		<!-- Bootstrap CSS -->		
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+	</head>
+
+	<body>
+			<div id="container"></div>
+
+			<p style="text-align: center;">
+				<a href="#" id="go">Load the predefined panorama</a>
+			</p>
+	</body>
+</html>

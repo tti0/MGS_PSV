@@ -130,13 +130,19 @@ window.onload = function() {
 // Load the predefined panorama
 function loadPanorama() {
 	alert("Pano triggered");
-	var PSV = new PhotoSphereViewer({
+	var loader = document.createElement('div');
+	loader.className = 'loader';
+	alert("loaded loader");
+	var PSV = new PhotoSphereViewer({	
+		// Deactivate the animation
+		time_anim: false,
 		panorama: 	whichSphere,
 		container: div_panoplaceholder,
 		navbar: true,
 		navbar_style: {
 			backgroundColor: 'rgba(58, 67, 77, 0.7)'
 		},
+		loading_html: loader,
 	});
 	alert("Vars set");
 	alert("Done");

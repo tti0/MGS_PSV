@@ -130,6 +130,9 @@ window.onload = function() {
 // Load the predefined panorama
 function loadPanorama() {
 	alert("Pano triggered");
+	var loader = document.createElement('div');
+	loader.className = 'loader';
+	alert("loaded loader");
 	var PSV = new PhotoSphereViewer({
 		panorama: 	whichSphere,
 		container: div_panoplaceholder,
@@ -137,7 +140,7 @@ function loadPanorama() {
 		navbar_style: {
 			backgroundColor: 'rgba(58, 67, 77, 0.7)'
 		},
-		alert("Vars set");
 	});
+	alert("Vars set");
 	alert("Done");
 }

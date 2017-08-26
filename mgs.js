@@ -136,7 +136,7 @@ function loadPanorama() {
 	var PSV = new PhotoSphereViewer({	
 		// Deactivate the animation
 		time_anim: false,
-		panorama: 	whichSphere,
+		panorama: 	"spheres/pond.jpg", //whichSphere,
 		container: div_panoplaceholder,
 		navbar: true,
 		navbar_style: {

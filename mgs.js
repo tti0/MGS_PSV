@@ -128,7 +128,8 @@ window.onload = function() {
 };
 
 // Load the predefined panorama
-function loadPanorama() {
+function loadPanorama(evt) {
+	evt.preventDefault();
 	alert("Pano triggered");
 	var loader = document.createElement('div');
 	loader.className = 'loader';
@@ -136,7 +137,7 @@ function loadPanorama() {
 	var PSV = new PhotoSphereViewer({	
 		// Deactivate the animation
 		time_anim: false,
-		panorama: 	"spheres/pond.jpg", //whichSphere,
+		panorama: "spheres/pond.jpg", //whichSphere,
 		container: div_panoplaceholder,
 		navbar: true,
 		navbar_style: {

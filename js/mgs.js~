@@ -122,12 +122,13 @@ window.onload = function() {
 	divChange();
 	niceName = "";
 	whichSphere = "";
-	document.getElementById('go').addEventListener('click', loadPredefinedPanorama, false);
+	//document.getElementById('go').addEventListener('click', loadPredefinedPanorama, false);
 };
 
 // Load the predefined panorama
 function loadPredefinedPanorama(evt) {
 //	evt.preventDefault();
+	alert("loading")	
 	// Loader
 	var loader = document.createElement('div');
 	loader.className = 'loader';

@@ -128,7 +128,7 @@ window.onload = function() {
 // Load the predefined panorama
 function loadPredefinedPanorama(evt) {
 //	evt.preventDefault();
-	alert("loading")	
+	alert("loading");
 	// Loader
 	var loader = document.createElement('div');
 	loader.className = 'loader';
@@ -146,4 +146,5 @@ function loadPredefinedPanorama(evt) {
 		}, //Resize the panorama
 		loading_html: loader, //HTML loader
 	});
+	alert("loaded");
 }

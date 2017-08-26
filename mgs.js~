@@ -137,7 +137,7 @@ function loadPanorama() {
 		navbar_style: {
 			backgroundColor: 'rgba(58, 67, 77, 0.7)'
 		},
+		alert("Vars set");
 	});
-	alert("Vars set");
 	alert("Done");
 }

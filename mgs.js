@@ -17,6 +17,8 @@ var btn_m_multigym = document.getElementById("m-multigym"); //13
 /// main divs
 var div_map = document.getElementById("pg-map");
 var div_pano = document.getElementById("pg-pano");
+/// pano placeholder div
+var div_panoplaceholder = document.getElementById("ps-loc");
 /// back button
 var btn_back = document.getElementById("goback");
 /// location label
@@ -40,64 +42,64 @@ function clickHandlerMap(z){
 	switch(z) {
 		case 0:
 			niceName = "Sports Hall";
-			whichSphere = "./spheres/sports_hall.jpg";
+			whichSphere = "spheres/sports_hall.jpg";
 			break;
 		case 1:
 			niceName = "Playing Fields";
-			whichSphere = "./spheres/playing_fields.jpg";
+			whichSphere = "spheres/playing_fields.jpg";
 			break;
 		case 2:
 			niceName = "Rectory";
-			whichSphere = "./spheres/rectory.jpg";
+			whichSphere = "spheres/rectory.jpg";
 			break;
 		case 3:
 			niceName = "Pond";
-			whichSphere = "./spheres/pond.jpg";
+			whichSphere = "spheres/pond.jpg";
 			break;
 		case 4:
 			niceName = "Plessyington Lodge Classroom";
-			whichSphere = "./spheres/plessyington_classroom.jpg";
+			whichSphere = "spheres/plessyington_classroom.jpg";
 			break;
 		case 5:
 			niceName = "Plessyington Lodge Foyer";
-			whichSphere = "./spheres/plessyington_foyer.jpg";
+			whichSphere = "spheres/plessyington_foyer.jpg";
 			break;
 		case 6:
 			niceName = "Memorial Hall";
-			whichSphere = "./spheres/memorial_hall.jpg";
+			whichSphere = "spheres/memorial_hall.jpg";
 			break;
 		case 7:
 			niceName = "Exhibition Space";
-			whichSphere = "./spheres/exhibition_space.jpg";
+			whichSphere = "spheres/exhibition_space.jpg";
 			break;
 		case 8:
 			niceName = "Main Stairwell";
-			whichSphere = "./spheres/main_stairwell.jpg";
+			whichSphere = "spheres/main_stairwell.jpg";
 			break;
 		case 9:
 			niceName = "Theatre";
-			whichSphere = "./spheres/theatre.jpg";
+			whichSphere = "spheres/theatre.jpg";
 			break;
 		case 10:
 			niceName = "Paton Library";
-			whichSphere = "./spheres/paton_library.jpg";
+			whichSphere = "spheres/paton_library.jpg";
 			break;
 		case 11:
 			niceName = "Garner Library";
-			whichSphere = "./spheres/garner_library.jpg";
+			whichSphere = "spheres/garner_library.jpg";
 			break;
 		case 12:
 			niceName = "Refectory";
-			whichSphere = "./spheres/refectory.jpg";
+			whichSphere = "spheres/refectory.jpg";
 			break;
 		case 13:
 			niceName = "Multi-gym";
-			whichSphere = "./spheres/multi_gym.jpg";
+			whichSphere = "spheres/multi_gym.jpg";
 			break;
 	}
 	alert(niceName + " : " + whichSphere);
 	txt_panolabel.innerHTML = niceName;
-	loadPredefinedPanorama();
+	loadPanorama();
 }
 
 function clickHandlerBack(){
@@ -126,25 +128,16 @@ window.onload = function() {
 };
 
 // Load the predefined panorama
-function loadPredefinedPanorama(evt) {
-//	evt.preventDefault();
-	alert("loading");
-	// Loader
-	var loader = document.createElement('div');
-	loader.className = 'loader';
-	// Panorama display
-	var div = document.getElementById('ps-loc');
-	div.style.height = '30px';
+function loadPanorama() {
+	alert("Pano triggered");
 	var PSV = new PhotoSphereViewer({
-		panorama: whichSphere, //Path to the panorama 
-		container: div, //Panorama container
-		time_anim: false, //De-activate animations
-		navbar: true, //Display navbar
-		size: {
-			width: '50%',
-			height: '250px'
-		}, //Resize the panorama
-		loading_html: loader, //HTML loader
+		panorama: 	whichSphere,
+		container: div_panoplaceholder,
+		navbar: true,
+		navbar_style: {
+			backgroundColor: 'rgba(58, 67, 77, 0.7)'
+		},
+		alert("Vars set");
 	});
-	alert("loaded");
+	alert("Done");
 }

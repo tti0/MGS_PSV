@@ -126,7 +126,6 @@ window.onload = function() {
 };
 
 function loadPanorama() {
-	console.log(whichSphere);
 	var PSV = new PhotoSphereViewer({
 		time_anim: false,
 		panorama: whichSphere,

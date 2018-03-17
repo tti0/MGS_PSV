@@ -1,29 +1,24 @@
-<!DOCTYPE html> 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8"/>
 		<title>MGS Photosphere Viewer :: Homepage</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Bootstrap CSS -->		
 		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/narrow_jumbotron.css">
 	</head>
 
 	<body>
 			<div class="container"> <!-- bs container -->
-			
 				<div class="row"> <!-- header -->
-				  <div class="col-sm-10">
-				  		<h1>MGS Photosphere Viewer <small class="text-muted">v2.0</small></h1>
+				  <div class="col-sm-11">
+				  		<h1>MGS Photosphere Viewer <small class="text-muted">v2.1</small></h1>
 				  </div>
-				  <div class="col-sm-2">
-				  		<img src="img/pano-icon_1306x1166.png" height="100px" width="100px" />
+				  <div class="col-sm-1">
+				  		<img src="img/pano-icon_1306x1166.png" height="75px" width="75px" />
 				  </div>
 				</div>	<!--- /header -->
-						
 				<hr>
-			
 				<div id="pg-map">
 					<p>Click a blue area on the map below to view a 360&deg; panoramic photosphere view of that area.</p>
 					<img src="img/map_770x268.jpg" usemap="#image-map">
@@ -44,34 +39,30 @@
 					    <area id="m-multigym" alt="Multi-Gym" title="Multi-Gym" coords="685,168,711,196" shape="rect" onclick="clickHandlerMap(13)">
 					</map>
 				</div>
-				
 				<div id="pg-pano">
 					<h5 id="panolabel">Text</h5>
 					<div id="ps-loc"></div>
-					<p style="text-align: center;"><a href="#" id="go">Load the predefined panorama</a></p>
+					<br>
 					<button id="goback" type="button" class="btn btn-block btn-info">&larr; Click to return to map</button>
-				</div>				
-
-				<br>
-				
+				</div>
+				<hr>
 		      <footer class="footer" style="text-align: right; font-size:12.5px;line-height: 0.3em;">
-		        <p><strong>Libraries used: </strong><a href="https://github.com/JeremyHeleine/Photo-Sphere-Viewer/">Photo Sphere Viewer v2.8</a>, <a href="http://threejs.org/">three.js v87</a>, <a href="https://popper.js.org/">popper.js v1.12.3</a>, <a href="https://jquery.com/">jQuery v3.2.1</a> and <a href="http://getbootstrap.com/">Bootstrap 4.0.0-beta</a>.</p>
+		      <p><strong>Libraries used: </strong><a href="https://github.com/JeremyHeleine/Photo-Sphere-Viewer/">Photo Sphere Viewer v2.9</a>, <a href="http://threejs.org/">three.js v71</a>, <a href="https://popper.js.org/">popper.js v1.14.1</a>, <a href="https://jquery.com/">jQuery v3.3.1</a> and <a href="http://getbootstrap.com/">Bootstrap 4.0.0</a>.</p>
 				  <p><strong>Github code:</strong> <a href="https://github.com/tti0/MGS_PSV">http://github.com/tti0/MGS_PSV</a> // <strong>Github live site:</strong> <a href="https://tti0.github.io/MGS_PSV/">http://tti0.github.io/MGS_PSV</a></p>
 				  <br style="text-align: right; font-size:12.5px;line-height: 1em;">
 				  <p>Licensed under the <a href="https://www.gnu.org/licenses/gpl.html">GNU GPL 3.0</a>.</p>
-				  <em><p>By Theodore Tucker, June to August 2016 (v1.1), August 2017 (v2.0)</p></em>
+				  <em><p>By Theodore Tucker, June to August 2016 (v1.1), August 2017 (v2.0), March 2018 (v2.1)</p></em>
 		      </footer>
-		      
 			</div> <!-- /bs container -->
 	</body>
-	
+
 	<!-- JS for bootstrap -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/popper.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<!-- JS for PhotoSphere -->
-		<script type="text/javascript" src="js/three.min.js"></script>
-		<script type="text/javascript"	src="js/photo-sphere-viewer.min.js"></script>
-		<script type="text/javascript" src="mgs.js"></script>
-	
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- JS for PhotoSphere -->
+	<script type="text/javascript" src="js/three.min.js"></script>
+	<script type="text/javascript" src="js/photo-sphere-viewer.min.js"></script>
+	<script type="text/javascript" src="mgs.js"></script>
+
 </html>

@@ -38,7 +38,7 @@ var niceName = "";
 var whichSphere = "";
 
 function clickHandlerMap(z){
-	divChange();	
+	divChange();
 	switch(z) {
 		case 0:
 			niceName = "Sports Hall";
@@ -97,7 +97,6 @@ function clickHandlerMap(z){
 			whichSphere = "spheres/multi_gym.jpg";
 			break;
 	}
-	alert(niceName + " : " + whichSphere);
 	txt_panolabel.innerHTML = niceName;
 	loadPanorama();
 }
@@ -124,27 +123,23 @@ window.onload = function() {
 	divChange();
 	niceName = "";
 	whichSphere = "";
-	//document.getElementById('go').addEventListener('click', loadPredefinedPanorama, false);
 };
 
-// Load the predefined panorama
-function loadPanorama(evt) {
-	evt.preventDefault();
-	alert("Pano triggered");
-	var loader = document.createElement('div');
-	loader.className = 'loader';
-	alert("loaded loader");
-	var PSV = new PhotoSphereViewer({	
-		// Deactivate the animation
+function loadPanorama() {
+	console.log(whichSphere);
+	var PSV = new PhotoSphereViewer({
 		time_anim: false,
-		panorama: "spheres/pond.jpg", //whichSphere,
-		container: div_panoplaceholder,
+		panorama: whichSphere,
+		container: 'ps-loc',
+		autoload: false,
 		navbar: true,
 		navbar_style: {
 			backgroundColor: 'rgba(58, 67, 77, 0.7)'
 		},
-		loading_html: loader,
+		size: {
+			width: '100%',
+			height: '500px'
+		},
 	});
-	alert("Vars set");
-	alert("Done");
+	PSV.load();
 }

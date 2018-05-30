@@ -9,56 +9,58 @@
 	</head>
 
 	<body>
-			<div class="container"> <!-- bs container -->
-				<div class="row"> <!-- header -->
+		<section class="section">
+			<div class="container"> <!-- bulma container -->
+				<div class="level"> <!-- header -->
 				  <div class="col-sm-11">
-				  		<h1>MGS Photosphere Viewer <small class="text-muted">v2.1</small></h1>
+				  		<h1 class="title">MGS Photosphere Viewer <small>v3.0</small></h1>
 				  </div>
 				  <div class="col-sm-1">
 				  		<img src="img/pano-icon_1306x1166.png" height="75px" width="75px" />
 				  </div>
 				</div>	<!--- /header -->
 				<hr>
-				<div id="pg-map">
-					<p>Click a blue area on the map below to view a 360&deg; panoramic photosphere view of that area. Please be patient - photospheres can take anywhere up to 1 minute to load depending on client device power.</p>
-					<img src="img/map_770x268.jpg" usemap="#image-map">
-					<map name="image-map">
-					    <area id="m-sports" alt="Sports Hall" title="Sports Hall" coords="130,87,38,170" shape="rect" onclick="clickHandlerMap(0)">
-					    <area id="m-fields" alt="Playing Fields" title="Playing Fields" coords="134,213,59,171" shape="rect" onclick="clickHandlerMap(1)">
-					    <area id="m-rectory" alt="Rectory" title="Rectory" coords="103,39,160,77" shape="rect" onclick="clickHandlerMap(2)">
-					    <area id="m-pond" alt="Pond" title="Pond" coords="140,84,207,128" shape="rect" onclick="clickHandlerMap(3)">
-					    <area id="m-plclass" alt="Plessyington Classroom" title="Plessyington Classroom" coords="173,3,254,80" shape="rect" onclick="clickHandlerMap(4)">
-					    <area id="m-plfoyer" alt="Plessyington Foyer" title="Plessyington Foyer" coords="271,10,346,91" shape="rect" onclick="clickHandlerMap(5)">
-					    <area id="m-memhall" alt="Memorial Hall" title="Memorial Hall" coords="459,54,528,97" shape="rect" onclick="clickHandlerMap(6)">
-					    <area id="m-exhib" alt="Exhibition Space" title="Exhibition Space" coords="535,68,547,88" shape="rect" onclick="clickHandlerMap(7)">
-					    <area id="m-mstw" alt="Main Stairwell" title="Main Stairwell" coords="554,63,577,89" shape="rect" onclick="clickHandlerMap(8)">
-					    <area id="m-theatre" alt="Theatre" title="Theatre" coords="586,56,621,95" shape="rect" onclick="clickHandlerMap(9)">
-					    <area id="m-paton" alt="Paton Library" title="Paton Library" coords="513,173,560,194" shape="rect" onclick="clickHandlerMap(10)">
-					    <area id="m-garner" alt="Garner Library" title="Garner Library" coords="572,182,602,206" shape="rect" onclick="clickHandlerMap(11)">
-					    <area id="m-refectory" alt="Refectory" title="Refectory" coords="620,101,658,169" shape="rect" onclick="clickHandlerMap(12)">
-					    <area id="m-multigym" alt="Multi-Gym" title="Multi-Gym" coords="685,168,711,196" shape="rect" onclick="clickHandlerMap(13)">
-					</map>
-				</div>
-				<div id="pg-pano">
-					<h5 id="panolabel">Text</h5>
-					<div id="ps-loc"></div>
-					<br>
-					<button id="goback" type="button" class="btn btn-block btn-info">&larr; Click to return to map</button>
-				</div>
+				<div class="level"> <!-- main -->
+					<div class="column"> <!-- main2 -->
+						<div id="pg-map">
+							<p>Click a blue area on the map below to view a 360&deg; panoramic photosphere view of that area. Please be patient - photospheres can take anywhere up to 1 minute to load depending on client device power.</p>
+							<img src="img/map_770x268.jpg" usemap="#image-map">
+							<map name="image-map">
+							    <area id="m-sports" alt="Sports Hall" title="Sports Hall" coords="130,87,38,170" shape="rect" onclick="clickHandlerMap(0)">
+							    <area id="m-fields" alt="Playing Fields" title="Playing Fields" coords="134,213,59,171" shape="rect" onclick="clickHandlerMap(1)">
+							    <area id="m-rectory" alt="Rectory" title="Rectory" coords="103,39,160,77" shape="rect" onclick="clickHandlerMap(2)">
+							    <area id="m-pond" alt="Pond" title="Pond" coords="140,84,207,128" shape="rect" onclick="clickHandlerMap(3)">
+							    <area id="m-plclass" alt="Plessyington Classroom" title="Plessyington Classroom" coords="173,3,254,80" shape="rect" onclick="clickHandlerMap(4)">
+							    <area id="m-plfoyer" alt="Plessyington Foyer" title="Plessyington Foyer" coords="271,10,346,91" shape="rect" onclick="clickHandlerMap(5)">
+							    <area id="m-memhall" alt="Memorial Hall" title="Memorial Hall" coords="459,54,528,97" shape="rect" onclick="clickHandlerMap(6)">
+							    <area id="m-exhib" alt="Exhibition Space" title="Exhibition Space" coords="535,68,547,88" shape="rect" onclick="clickHandlerMap(7)">
+							    <area id="m-mstw" alt="Main Stairwell" title="Main Stairwell" coords="554,63,577,89" shape="rect" onclick="clickHandlerMap(8)">
+							    <area id="m-theatre" alt="Theatre" title="Theatre" coords="586,56,621,95" shape="rect" onclick="clickHandlerMap(9)">
+							    <area id="m-paton" alt="Paton Library" title="Paton Library" coords="513,173,560,194" shape="rect" onclick="clickHandlerMap(10)">
+							    <area id="m-garner" alt="Garner Library" title="Garner Library" coords="572,182,602,206" shape="rect" onclick="clickHandlerMap(11)">
+							    <area id="m-refectory" alt="Refectory" title="Refectory" coords="620,101,658,169" shape="rect" onclick="clickHandlerMap(12)">
+							    <area id="m-multigym" alt="Multi-Gym" title="Multi-Gym" coords="685,168,711,196" shape="rect" onclick="clickHandlerMap(13)">
+							</map>
+						</div>
+						<div id="pg-pano">
+							<h5 id="panolabel">Text</h5>
+							<div id="ps-loc"></div>
+							<br>
+							<button id="goback" type="button" class="button is-primary">&larr; Click to return to map</button>
+						</div>
+					</div> <!-- /main2 -->
+				</div> <!-- /main -->
 				<hr>
-		      <footer class="footer" style="text-align: right; font-size:12.5px;line-height: 0.3em;">
-		      <p><strong>Libraries used: </strong><a href="https://github.com/JeremyHeleine/Photo-Sphere-Viewer/">Photo Sphere Viewer v2.9</a>, <a href="http://threejs.org/">three.js v71</a>, <a href="https://jquery.com/">jQuery v3.3.1</a> and <a href="http://getbootstrap.com/">Bootstrap 4.0.0</a>.</p>
-				  <p><strong>Github code:</strong> <a href="https://github.com/tti0/MGS_PSV">http://github.com/tti0/MGS_PSV</a> // <strong>Github live site:</strong> <a href="https://tti0.github.io/MGS_PSV/">http://tti0.github.io/MGS_PSV</a></p>
-				  <br style="text-align: right; font-size:12.5px;line-height: 1em;">
-				  <p>Licensed under the <a href="https://www.gnu.org/licenses/gpl.html">GNU GPL 3.0</a>.</p>
-				  <em><p>By Theodore Tucker, June to August 2016 (v1.1), August 2017 (v2.0), March 2018 (v2.1)</p></em>
-		      </footer>
-			</div> <!-- /bs container -->
+				<div class="level"> <!-- footer -->
+					<div class="column" style="text-align:center;"> <!-- footer2 -->
+						<p><a href="https://github.com/tti0/MGS_PSV" target="_blank">MGS Photosphere Viewer</a> <a href="https://github.com/tti0/MGS_PSV/releases" target="_blank">v3.0</a> by <a href="https://github.com/tti0" target="_blank">Theodore Tucker</a> under the <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank">GNU GPL 3.0</a>.</p>
+						<p style="font-style:italic;"><a href="https://github.com/tti0/MGS_PSV/blob/master/README.md" target="_blank">Click here to view more info</a></p>
+					</div> <!-- /footer2 -->
+				</div> <!-- /footer -->
+			</div> <!-- /bulma container -->
+		</section>
 	</body>
 
-	<!-- JS for bootstrap -->
-	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<!-- JS for PhotoSphere -->
 	<script type="text/javascript" src="js/three.min.js"></script>
 	<script type="text/javascript" src="js/photo-sphere-viewer.min.js"></script>

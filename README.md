@@ -11,7 +11,6 @@ The project would not be possible without the use of the following Open Source p
 - Photo Sphere Viewer v2.9 by Jeremy Heleine (https://github.com/JeremyHeleine/Photo-Sphere-Viewer/)
 - three.js v.71 by mrdoob (https://threejs.org/)
 - Bulma v0.7.1 by Jeremy Thomas (https://bulma.io/)
-- Leaflet JS v.1.3.1 by Andrew Cherniavskii (https://leafletjs.com/)
 
 ## License and Copyright
 

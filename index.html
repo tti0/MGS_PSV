@@ -13,7 +13,7 @@
 			<div class="container"> <!-- bulma container -->
 				<div class="level"> <!-- header -->
 				  <div class="col-sm-11">
-				  		<h1 class="title">MGS Photosphere Viewer <small>v3.0</small></h1>
+				  		<h2 class="title is-2">MGS Photosphere Viewer <small class="subtitle is-4">v3.0</small></h2>
 				  </div>
 				  <div class="col-sm-1">
 				  		<img src="img/pano-icon_1306x1166.png" height="75px" width="75px" />
@@ -24,6 +24,7 @@
 					<div class="column"> <!-- main2 -->
 						<div id="pg-map">
 							<p>Click a blue area on the map below to view a 360&deg; panoramic photosphere view of that area. Please be patient - photospheres can take anywhere up to 1 minute to load depending on client device power.</p>
+							<br>
 							<img src="img/map_770x268.jpg" usemap="#image-map">
 							<map name="image-map">
 							    <area id="m-sports" alt="Sports Hall" title="Sports Hall" coords="130,87,38,170" shape="rect" onclick="clickHandlerMap(0)">
@@ -43,7 +44,7 @@
 							</map>
 						</div>
 						<div id="pg-pano">
-							<h5 id="panolabel">Text</h5>
+							<h5 class="title is-5" id="panolabel">Photosphere title here</h5>
 							<div id="ps-loc"></div>
 							<br>
 							<button id="goback" type="button" class="button is-primary">&larr; Click to return to map</button>
@@ -61,9 +62,10 @@
 		</section>
 	</body>
 
-	<!-- JS for PhotoSphere -->
+	<!-- JS for Photosphere -->
 	<script type="text/javascript" src="js/three.min.js"></script>
 	<script type="text/javascript" src="js/photo-sphere-viewer.min.js"></script>
+	<!-- Custom JS -->
 	<script type="text/javascript" src="mgs.js"></script>
 
 </html>

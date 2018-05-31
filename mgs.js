@@ -1,19 +1,4 @@
 // load in dynamic elements as vars for JS
-/// map hotspots
-var btn_m_sports = document.getElementById("m-sports");  //0
-var btn_m_fields = document.getElementById("m-fields"); //1
-var btn_m_rectory = document.getElementById("m-rectory"); //2
-var btn_m_pond = document.getElementById("m-pond"); //3
-var btn_m_plclass = document.getElementById("m-plclass"); //4
-var btn_m_plfoyer = document.getElementById("m-plfoyer"); //5
-var btn_m_memhall = document.getElementById("m-memhall"); //6
-var btn_m_exhib = document.getElementById("m-exhib"); //7
-var btn_m_mstw = document.getElementById("m-mstw"); //8
-var btn_m_theatre = document.getElementById("m-theatre"); //9
-var btn_m_paton = document.getElementById("m-paton"); //10
-var btn_m_garner = document.getElementById("m-garner"); //11
-var btn_m_refectory = document.getElementById("m-refectory"); //12
-var btn_m_multigym = document.getElementById("m-multigym"); //13
 /// main divs
 var div_map = document.getElementById("pg-map");
 var div_pano = document.getElementById("pg-pano");
@@ -40,61 +25,61 @@ var whichSphere = "";
 function clickHandlerMap(z){
 	divChange();
 	switch(z) {
-		case 0:
+		case "sports_hall":
 			niceName = "Sports Hall";
-			whichSphere = "spheres/sports_hall.jpg";
+			whichSphere = "img/spheres/sports_hall.jpg";
 			break;
-		case 1:
+		case "playing_fields":
 			niceName = "Playing Fields";
-			whichSphere = "spheres/playing_fields.jpg";
+			whichSphere = "img/spheres/playing_fields.jpg";
 			break;
-		case 2:
+		case "rectory":
 			niceName = "Rectory";
-			whichSphere = "spheres/rectory.jpg";
+			whichSphere = "img/spheres/rectory.jpg";
 			break;
-		case 3:
+		case "pond":
 			niceName = "Pond";
-			whichSphere = "spheres/pond.jpg";
+			whichSphere = "img/spheres/pond.jpg";
 			break;
-		case 4:
+		case "plessyington_classroom":
 			niceName = "Plessyington Lodge Classroom";
-			whichSphere = "spheres/plessyington_classroom.jpg";
+			whichSphere = "img/spheres/plessyington_classroom.jpg";
 			break;
-		case 5:
+		case "plessyington_foyer":
 			niceName = "Plessyington Lodge Foyer";
-			whichSphere = "spheres/plessyington_foyer.jpg";
+			whichSphere = "img/spheres/plessyington_foyer.jpg";
 			break;
-		case 6:
+		case "memorial_hall":
 			niceName = "Memorial Hall";
-			whichSphere = "spheres/memorial_hall.jpg";
+			whichSphere = "img/spheres/memorial_hall.jpg";
 			break;
-		case 7:
+		case "exhibition_space":
 			niceName = "Exhibition Space";
-			whichSphere = "spheres/exhibition_space.jpg";
+			whichSphere = "img/spheres/exhibition_space.jpg";
 			break;
-		case 8:
+		case "main_stairwell":
 			niceName = "Main Stairwell";
-			whichSphere = "spheres/main_stairwell.jpg";
+			whichSphere = "img/spheres/main_stairwell.jpg";
 			break;
-		case 9:
+		case "theatre":
 			niceName = "Theatre";
-			whichSphere = "spheres/theatre.jpg";
+			whichSphere = "img/spheres/theatre.jpg";
 			break;
-		case 10:
+		case "paton_library":
 			niceName = "Paton Library";
-			whichSphere = "spheres/paton_library.jpg";
+			whichSphere = "img/spheres/paton_library.jpg";
 			break;
-		case 11:
+		case "garner_library":
 			niceName = "Garner Library";
-			whichSphere = "spheres/garner_library.jpg";
+			whichSphere = "img/spheres/garner_library.jpg";
 			break;
-		case 12:
+		case "refectory":
 			niceName = "Refectory";
-			whichSphere = "spheres/refectory.jpg";
+			whichSphere = "img/spheres/refectory.jpg";
 			break;
-		case 13:
+		case "multi_gym":
 			niceName = "Multi-gym";
-			whichSphere = "spheres/multi_gym.jpg";
+			whichSphere = "img/spheres/multi_gym.jpg";
 			break;
 	}
 	txt_panolabel.innerHTML = niceName;
@@ -110,12 +95,12 @@ function clickHandlerBack(){
 function divChange(){
 	if (switchStatus == 0) {
 		switchStatus = 1;
-		div_map.style.display = 'none';
-		div_pano.style.display = 'block';
+		div_map.style.display = "none";
+		div_pano.style.display = "block";
 	} else {
 		switchStatus = 0;
-		div_map.style.display = 'block';
-		div_pano.style.display = 'none';
+		div_map.style.display = "block";
+		div_pano.style.display = "none";
 	}
 }
 
@@ -129,16 +114,57 @@ function loadPanorama() {
 	var PSV = new PhotoSphereViewer({
 		time_anim: false,
 		panorama: whichSphere,
-		container: 'ps-loc',
+		container: "ps-loc",
 		autoload: false,
 		navbar: true,
 		navbar_style: {
-			backgroundColor: 'rgba(58, 67, 77, 0.7)'
+			backgroundColor: "rgba(58, 67, 77, 0.7)"
 		},
 		size: {
-			width: '100%',
-			height: '500px'
+			width: "100%",
+			height: "500px"
 		},
 	});
 	PSV.load();
 }
+
+var schoolMap = L.map('newMapDiv').setView([53.44846, -2.21140], 18);
+var schoolMapBounds = L.latLngBounds(L.latLng(53.44969, -2.21645), L.latLng(53.44681, -2.20732));
+L.tileLayer('img/map_tiles/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    minZoom: 17, // limit user scrolling
+    maxZoom: 19,
+    bounds: schoolMapBounds // don't load more map than needed
+}).addTo(schoolMap);
+schoolMap.setMaxBounds(schoolMapBounds); // don't let the user see more map than needed
+
+// <pins on map>
+var pin_sports_hall = L.marker([53.44880, -2.21423]).addTo(schoolMap);
+pin_sports_hall.bindPopup('<a onclick="clickHandlerMap(&quot;sports_hall&quot;)"><b>Sports Hall</b></a>');
+var pin_playing_fields = L.marker([53.44864, -2.21375]).addTo(schoolMap);
+pin_playing_fields.bindPopup('<a onclick="clickHandlerMap(&quot;playing_fields&quot;)"><b>Playing Fields</b></a>');
+var pin_rectory = L.marker([53.44925, -2.21364]).addTo(schoolMap);
+pin_rectory.bindPopup('<a onclick="clickHandlerMap(&quot;rectory&quot;)"><b>Rectory</b></a>');
+var pin_pond = L.marker([53.44896, -2.21372]).addTo(schoolMap);
+pin_pond.bindPopup('<a onclick="clickHandlerMap(&quot;pond&quot;)"><b>Pond</b></a>');
+var pin_plessyington_classroom = L.marker([53.44909, -2.21326]).addTo(schoolMap);
+pin_plessyington_classroom.bindPopup('<a onclick="clickHandlerMap(&quot;plessyington_classroom&quot;)"><b>Plessyington Lodge Classroom</b></a>');
+var pin_plessyington_foyer = L.marker([53.44904, -2.21260]).addTo(schoolMap);
+pin_plessyington_foyer.bindPopup('<a onclick="clickHandlerMap(&quot;plessyington_foyer&quot;)"><b>Plessyington Lodge Foyer</b></a>');
+var pin_memorial_hall = L.marker([53.44907, -2.21101]).addTo(schoolMap);
+pin_memorial_hall.bindPopup('<a onclick="clickHandlerMap(&quot;memorial_hall&quot;)"><b>Memorial Hall</b></a>');
+var pin_exhibition_space = L.marker([53.44905, -2.21071]).addTo(schoolMap);
+pin_exhibition_space.bindPopup('<a onclick="clickHandlerMap(&quot;exhibition_space&quot;)"><b>Exhibition Space</b></a>');
+var pin_main_stairwell = L.marker([53.44898, -2.21056]).addTo(schoolMap);
+pin_main_stairwell.bindPopup('<a onclick="clickHandlerMap(&quot;main_stairwell&quot;)"><b>Main Stairwell</b></a>');
+var pin_theatre = L.marker([53.44899, -2.21025]).addTo(schoolMap);
+pin_theatre.bindPopup('<a onclick="clickHandlerMap(&quot;theatre&quot;)"><b>Theatre</b></a>');
+var pin_refectory = L.marker([53.44871, -2.20992]).addTo(schoolMap);
+pin_refectory.bindPopup('<a onclick="clickHandlerMap(&quot;refectory&quot;)"><b>Refectory</b></a>');
+var pin_multi_gym = L.marker([53.44846, -2.20948]).addTo(schoolMap);
+pin_multi_gym.bindPopup('<a onclick="clickHandlerMap(&quot;multi_gym&quot;)"><b>Multi-gym</b></a>');
+var pin_paton_library = L.marker([53.44848, -2.21082]).addTo(schoolMap);
+pin_paton_library.bindPopup('<a onclick="clickHandlerMap(&quot;paton_library&quot;)"><b>Paton Library</b></a>');
+var pin_garner_library = L.marker([53.44845, -2.21047]).addTo(schoolMap);
+pin_garner_library.bindPopup('<a onclick="clickHandlerMap(&quot;garner_library&quot;)"><b>Garner Library</b></a>');
+// </pins on map>

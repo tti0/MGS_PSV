@@ -1,19 +1,4 @@
 // load in dynamic elements as vars for JS
-/// map hotspots
-var btn_m_sports = document.getElementById("m-sports");  //0
-var btn_m_fields = document.getElementById("m-fields"); //1
-var btn_m_rectory = document.getElementById("m-rectory"); //2
-var btn_m_pond = document.getElementById("m-pond"); //3
-var btn_m_plclass = document.getElementById("m-plclass"); //4
-var btn_m_plfoyer = document.getElementById("m-plfoyer"); //5
-var btn_m_memhall = document.getElementById("m-memhall"); //6
-var btn_m_exhib = document.getElementById("m-exhib"); //7
-var btn_m_mstw = document.getElementById("m-mstw"); //8
-var btn_m_theatre = document.getElementById("m-theatre"); //9
-var btn_m_paton = document.getElementById("m-paton"); //10
-var btn_m_garner = document.getElementById("m-garner"); //11
-var btn_m_refectory = document.getElementById("m-refectory"); //12
-var btn_m_multigym = document.getElementById("m-multigym"); //13
 /// main divs
 var div_map = document.getElementById("pg-map");
 var div_pano = document.getElementById("pg-pano");
@@ -40,59 +25,59 @@ var whichSphere = "";
 function clickHandlerMap(z){
 	divChange();
 	switch(z) {
-		case 0:
+		case "sports_hall":
 			niceName = "Sports Hall";
 			whichSphere = "img/spheres/sports_hall.jpg";
 			break;
-		case 1:
+		case "playing_fields":
 			niceName = "Playing Fields";
 			whichSphere = "img/spheres/playing_fields.jpg";
 			break;
-		case 2:
+		case "rectory":
 			niceName = "Rectory";
 			whichSphere = "img/spheres/rectory.jpg";
 			break;
-		case 3:
+		case "pond":
 			niceName = "Pond";
 			whichSphere = "img/spheres/pond.jpg";
 			break;
-		case 4:
+		case "plessyington_classroom":
 			niceName = "Plessyington Lodge Classroom";
 			whichSphere = "img/spheres/plessyington_classroom.jpg";
 			break;
-		case 5:
+		case "plessyington_foyer":
 			niceName = "Plessyington Lodge Foyer";
 			whichSphere = "img/spheres/plessyington_foyer.jpg";
 			break;
-		case 6:
+		case "memorial_hall":
 			niceName = "Memorial Hall";
 			whichSphere = "img/spheres/memorial_hall.jpg";
 			break;
-		case 7:
+		case "exhibition_space":
 			niceName = "Exhibition Space";
 			whichSphere = "img/spheres/exhibition_space.jpg";
 			break;
-		case 8:
+		case "main_stairwell":
 			niceName = "Main Stairwell";
 			whichSphere = "img/spheres/main_stairwell.jpg";
 			break;
-		case 9:
+		case "theatre":
 			niceName = "Theatre";
 			whichSphere = "img/spheres/theatre.jpg";
 			break;
-		case 10:
+		case "paton_library":
 			niceName = "Paton Library";
 			whichSphere = "img/spheres/paton_library.jpg";
 			break;
-		case 11:
+		case "garner_library":
 			niceName = "Garner Library";
 			whichSphere = "img/spheres/garner_library.jpg";
 			break;
-		case 12:
+		case "refectory":
 			niceName = "Refectory";
 			whichSphere = "img/spheres/refectory.jpg";
 			break;
-		case 13:
+		case "multi_gym":
 			niceName = "Multi-gym";
 			whichSphere = "img/spheres/multi_gym.jpg";
 			break;
@@ -142,3 +127,14 @@ function loadPanorama() {
 	});
 	PSV.load();
 }
+
+var schoolMap = L.map('newMapDiv').setView([53.44846, -2.21140], 17);
+var schoolMapBounds = L.latLngBounds(L.latLng(53.44969,-2.21645),L.latLng(53.44681,-2.20732));
+L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+		minZoom: 17, // limit user scrolling
+		maxZoom: 19,
+		bounds: schoolMapBounds // don't load more than needed
+}).addTo(schoolMap);
+schoolMap.setMaxBounds(schoolMapBounds); // don't let the user see more than needed
+var marker = L.marker([53.4486, -2.209761]).addTo(schoolMap);

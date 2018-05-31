@@ -130,7 +130,7 @@ function loadPanorama() {
 
 var schoolMap = L.map('newMapDiv').setView([53.44846, -2.21140], 18);
 var schoolMapBounds = L.latLngBounds(L.latLng(53.44969, -2.21645), L.latLng(53.44681, -2.20732));
-L.tileLayer('https://b.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('img/map_tiles/{z}/{x}/{y}.png', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
     minZoom: 17, // limit user scrolling
     maxZoom: 19,

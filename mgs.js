@@ -42,59 +42,59 @@ function clickHandlerMap(z){
 	switch(z) {
 		case 0:
 			niceName = "Sports Hall";
-			whichSphere = "spheres/sports_hall.jpg";
+			whichSphere = "img/spheres/sports_hall.jpg";
 			break;
 		case 1:
 			niceName = "Playing Fields";
-			whichSphere = "spheres/playing_fields.jpg";
+			whichSphere = "img/spheres/playing_fields.jpg";
 			break;
 		case 2:
 			niceName = "Rectory";
-			whichSphere = "spheres/rectory.jpg";
+			whichSphere = "img/spheres/rectory.jpg";
 			break;
 		case 3:
 			niceName = "Pond";
-			whichSphere = "spheres/pond.jpg";
+			whichSphere = "img/spheres/pond.jpg";
 			break;
 		case 4:
 			niceName = "Plessyington Lodge Classroom";
-			whichSphere = "spheres/plessyington_classroom.jpg";
+			whichSphere = "img/spheres/plessyington_classroom.jpg";
 			break;
 		case 5:
 			niceName = "Plessyington Lodge Foyer";
-			whichSphere = "spheres/plessyington_foyer.jpg";
+			whichSphere = "img/spheres/plessyington_foyer.jpg";
 			break;
 		case 6:
 			niceName = "Memorial Hall";
-			whichSphere = "spheres/memorial_hall.jpg";
+			whichSphere = "img/spheres/memorial_hall.jpg";
 			break;
 		case 7:
 			niceName = "Exhibition Space";
-			whichSphere = "spheres/exhibition_space.jpg";
+			whichSphere = "img/spheres/exhibition_space.jpg";
 			break;
 		case 8:
 			niceName = "Main Stairwell";
-			whichSphere = "spheres/main_stairwell.jpg";
+			whichSphere = "img/spheres/main_stairwell.jpg";
 			break;
 		case 9:
 			niceName = "Theatre";
-			whichSphere = "spheres/theatre.jpg";
+			whichSphere = "img/spheres/theatre.jpg";
 			break;
 		case 10:
 			niceName = "Paton Library";
-			whichSphere = "spheres/paton_library.jpg";
+			whichSphere = "img/spheres/paton_library.jpg";
 			break;
 		case 11:
 			niceName = "Garner Library";
-			whichSphere = "spheres/garner_library.jpg";
+			whichSphere = "img/spheres/garner_library.jpg";
 			break;
 		case 12:
 			niceName = "Refectory";
-			whichSphere = "spheres/refectory.jpg";
+			whichSphere = "img/spheres/refectory.jpg";
 			break;
 		case 13:
 			niceName = "Multi-gym";
-			whichSphere = "spheres/multi_gym.jpg";
+			whichSphere = "img/spheres/multi_gym.jpg";
 			break;
 	}
 	txt_panolabel.innerHTML = niceName;
@@ -110,12 +110,12 @@ function clickHandlerBack(){
 function divChange(){
 	if (switchStatus == 0) {
 		switchStatus = 1;
-		div_map.style.display = 'none';
-		div_pano.style.display = 'block';
+		div_map.style.display = "none";
+		div_pano.style.display = "block";
 	} else {
 		switchStatus = 0;
-		div_map.style.display = 'block';
-		div_pano.style.display = 'none';
+		div_map.style.display = "block";
+		div_pano.style.display = "none";
 	}
 }
 
@@ -129,15 +129,15 @@ function loadPanorama() {
 	var PSV = new PhotoSphereViewer({
 		time_anim: false,
 		panorama: whichSphere,
-		container: 'ps-loc',
+		container: "ps-loc",
 		autoload: false,
 		navbar: true,
 		navbar_style: {
-			backgroundColor: 'rgba(58, 67, 77, 0.7)'
+			backgroundColor: "rgba(58, 67, 77, 0.7)"
 		},
 		size: {
-			width: '100%',
-			height: '500px'
+			width: "100%",
+			height: "500px"
 		},
 	});
 	PSV.load();

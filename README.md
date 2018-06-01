@@ -1,4 +1,4 @@
-# MGS Photosphere Viewer v3.0
+# MGS Photosphere Viewer v3.1
 
 This website is a school project to show photospheres of different areas of a school site by clicking on a map, without an Internet connection being needed.
 A live demo is avaliable at https://tti0.github.io/MGS_PSV/.
@@ -19,10 +19,3 @@ The project would not be possible without the use of the following Open Source p
 This project is Copyright (©) Theodore Tucker, and is licensed for re-use and modification under the terms of the GNU General Public License Agreement 3.0 (https://www.gnu.org/licenses/gpl-3.0.txt). NO WARRANTY WHATSOEVER IS PROVIDED.
 
 Creators of libraries and projects listed above retain their respective Copyrights.
-
-### Detailed Copyright information for verisons
-
-- Version 1.1 -- Copyright (©) Theodore Tucker, June to August 2016
-- Version 2.0 -- Copyright (©) Theodore Tucker, August 2017
-- Version 2.1 -- Copyright (©) Theodore Tucker, March 2018
-- Version 3.0 -- Copyright (©) Theodore Tucker, May 2018

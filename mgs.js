@@ -116,6 +116,7 @@ function loadPanorama() {
 		panorama: whichSphere,
 		container: "ps-loc",
 		autoload: false,
+		loading_html: '<div class="spinner"></div>',
 		navbar: true,
 		navbar_style: {
 			backgroundColor: "rgba(58, 67, 77, 0.7)"
@@ -131,7 +132,7 @@ function loadPanorama() {
 var schoolMap = L.map('newMapDiv').setView([53.44846, -2.21140], 18);
 var schoolMapBounds = L.latLngBounds(L.latLng(53.44969, -2.21645), L.latLng(53.44681, -2.20732));
 L.tileLayer('img/map_tiles/{z}/{x}/{y}.png', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
     minZoom: 17, // limit user scrolling
     maxZoom: 19,
     bounds: schoolMapBounds // don't load more map than needed

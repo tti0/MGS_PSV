@@ -3,6 +3,8 @@
 This website is a school project to show photospheres of different areas of a school site by clicking on a map, without an Internet connection being needed.
 A live demo is avaliable at https://tti0.github.io/MGS_PSV/.
 
+Note that the code **must be run on a web server** (e.g. `http://localhost/index.html`), not as locally served files (e.g. `file:///var/www/html/index.html`).
+
 *N.B. This is a school project.*
 
 ## Libraries
